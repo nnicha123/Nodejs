@@ -17,7 +17,7 @@ http.createServer((req,res) => {
     if(req.url === '/') return renderHTML('./formget.html',req,res)
 
     if(p_url.pathname === '/getdata'){
-        res.writeHead(200,{'content-type':'text/html'})
+        res.writeHead(200,{'content-type':'text/html;charset=utf8'})
         res.write(`<h3>Your data</h3>`)
         res.write(`<p>Name: ${p_url.query.fname}</p>`)
         res.write(`<p>Last Name: ${p_url.query.lname}</p>`)
