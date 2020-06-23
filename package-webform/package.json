@@ -4,7 +4,7 @@
   "description": "",
   "main": "http-formpost.js",
   "scripts": {
-    "start": "node http-formpost-body.js",
+    "start": "nodemon http-formpost-body.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
