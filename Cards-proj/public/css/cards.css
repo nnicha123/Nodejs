@@ -1,0 +1,67 @@
+.outer-container{
+    margin: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-wrap{
+    width: 250px;
+    height: 300px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    padding: 15px;
+    margin: 10px;
+}
+.fullname{
+    font-size: 18px;
+    font-weight: bold;
+}
+.content{
+    font-size: 13px;
+}
+.card-wrap img{
+    width: 100%;
+    height: 200px;
+}
+.form-style{
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    padding-top: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.form-style input, .form-style textarea{
+    width: 400px;
+    height: 30px;
+    margin: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(216, 214, 214);
+}
+.form-style textarea{
+    height: 60px;
+}
+button{
+    width: 40%;
+    margin: 20px 0;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(216, 214, 214);
+}
+.addButton{
+    width: 100px;
+    margin: 0 auto;
+}
+.card-items{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

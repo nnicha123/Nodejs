@@ -1,0 +1,21 @@
+{"users" : [{
+    "userId": 1,
+    "firstName": "Krish",
+    "lastName": "Lee",
+    "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg",
+    "emailAddress": "krish.lee@learningcontainer.com"
+},
+{
+    "userId": 2,
+    "firstName": "racks",
+    "lastName": "jacson",
+    "imageSrc": "https://images.newscientist.com/wp-content/uploads/2019/07/02111520/gettyimages-157639696.jpg",
+    "emailAddress": "racks.jacson@learningcontainer.com"
+},
+{
+    "userId": 3,
+    "firstName": "denial",
+    "lastName": "roast",
+    "imageSrc": "https://cdn.britannica.com/38/111338-050-D23BE7C8/Stars-NGC-290-Hubble-Space-Telescope.jpg",
+    "emailAddress": "denial.roast@learningcontainer.com"
+}]}
