@@ -23,6 +23,26 @@ app.get('/', (req, res) => {
     `
     res.send(homePage)
 })
+
+app.get('/search',(req,res) => {
+    let searchItem =  `<form action="/dosearch" method="GET">
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" placeholder="First Name">
+        <input type="submit">
+    </form>`
+    res.send(searchItem)
+})
+
+app.get('/dosearch',(req,res) => {
+    let currentUser = userArr.filter(x=> x.firstName.includes(req.query.firstname))
+    let cardItems = 
+    `<div style="margin:30px auto;width:500px;height:400px;padding:20px;box-shadow: 0 1px 5px rgba(0,0,0,0.3)">
+            ${cardInside(currentUser[0].userId)}
+    </div>
+  `
+    res.send(cardItems)
+})
+
 app.get('/all',(req,res) => {
     let cardItems = `<div style="display:flex;justify-content:center">
     ${singleCard(1)}
