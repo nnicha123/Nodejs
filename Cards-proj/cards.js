@@ -4,14 +4,17 @@ const fs = require('fs')
 
 let data = JSON.parse(fs.readFileSync('./cards.json'))
 let userArr = data.users
-const singleCard = (i) => {
-    return `
-    <div style="margin:30px 10px;width:300px;height:400px;padding:20px;box-shadow: 0 1px 5px rgba(0,0,0,0.3)">
-    <div key=${userArr[i-1].userId}>
+const cardInside = (i) => {
+    return `<div key=${userArr[i-1].userId}>
         <img style="width:100%;height:300px" src=${userArr[i-1].imageSrc} />
         <p style="font-weight:bold;font-size:20px">Full name : ${userArr[i-1].firstName} ${userArr[i-1].lastName}</p>
         <p style="font-size:20px">${userArr[i-1].emailAddress}</p>
-    </div>
+    </div>`
+}
+const singleCard = (i) => {
+    return `
+    <div style="margin:30px 10px;width:300px;height:400px;padding:20px;box-shadow: 0 1px 5px rgba(0,0,0,0.3)">
+        ${cardInside(i)}
     </div>`
 }
 app.get('/', (req, res) => {
@@ -29,15 +32,12 @@ app.get('/all',(req,res) => {
         res.send(cardItems)
 })
 for (let i = 0; i < 4; i++) {
-    app.get(`/${i + 1}`, (req, res) => {
-        let cardItems = `
-        <div style="margin:30px auto;width:400px;height:400px;padding:20px;box-shadow: 0 1px 5px rgba(0,0,0,0.3)">
-        <div key=${userArr[i].userId}>
-            <img style="width:100%;height:300px" src=${userArr[i].imageSrc} />
-            <p style="font-weight:bold;font-size:20px">Full name : ${userArr[i].firstName} ${userArr[i].lastName}</p>
-            <p style="font-size:20px">${userArr[i].emailAddress}</p>
+    app.get(`/${i}`, (req, res) => {
+        let cardItems = 
+        `<div style="margin:30px auto;width:500px;height:400px;padding:20px;box-shadow: 0 1px 5px rgba(0,0,0,0.3)">
+                ${cardInside(i)}
         </div>
-        </div>`
+      `
         res.send(cardItems)
     })
 }
